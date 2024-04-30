@@ -232,8 +232,11 @@ header {
 
 // reviews
 .reviews {
+    padding: 100px 0;
+
     .main_title {
         margin-bottom: 80px;
+        text-align: center;
     }
 
     .reviews_blocks {
@@ -254,5 +257,52 @@ header {
             width: 100%;
         }
     }
+
+    .reviews_btn {
+        margin-top: 80px;
+        @include flex-full-center();
+
+        button {
+            padding: 30px 50px;
+            color: rgb(240, 239, 239);
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 38px;
+            border-radius: 100px;
+            background: rgb(213, 26, 26);
+        }
+    }
 }
 // reviews
+
+// footer
+footer {
+    padding: 40px 0;
+    
+    .main_container {
+        @include flex-center();
+        justify-content: space-between;
+    }
+
+    .footer_link {
+        @include flex-center();
+        gap: 40px;
+    }
+
+    .underline {
+        border-bottom: 1px solid;
+    }
+
+    a,span {
+        color: rgb(119, 66, 55);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+    }
+
+    .footer_social {
+        @include flex-center();
+        gap: 20px;
+    }
+}
+// footer

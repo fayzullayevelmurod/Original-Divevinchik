@@ -177,8 +177,12 @@ header a {
   line-height: 150%;
 }
 
+.reviews {
+  padding: 100px 0;
+}
 .reviews .main_title {
   margin-bottom: 80px;
+  text-align: center;
 }
 .reviews .reviews_blocks {
   display: flex;
@@ -195,4 +199,47 @@ header a {
 }
 .reviews .reviews_block img {
   width: 100%;
+}
+.reviews .reviews_btn {
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reviews .reviews_btn button {
+  padding: 30px 50px;
+  color: rgb(240, 239, 239);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 38px;
+  border-radius: 100px;
+  background: rgb(213, 26, 26);
+}
+
+footer {
+  padding: 40px 0;
+}
+footer .main_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer_link {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+footer .underline {
+  border-bottom: 1px solid;
+}
+footer a, footer span {
+  color: rgb(119, 66, 55);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+}
+footer .footer_social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }/*# sourceMappingURL=style.css.map */
