@@ -38,6 +38,7 @@
 }
 
 a {
+    font-family: 'Lato', sans-serif;
     text-decoration: none;
     color: inherit;
     display: inline-block;
@@ -56,7 +57,9 @@ html {
 }
 
 body {
-
+    font-family: 'Lato', sans-serif;
+    background-color: rgba(216, 208, 189, 1);
+    background-image: url('../images/bg.png');
     font-style: normal;
 }
 
@@ -65,6 +68,7 @@ input {
 }
 
 button {
+    font-family: 'Lato', sans-serif;
     border: none;
     cursor: pointer;
     background: transparent;
@@ -81,7 +85,147 @@ address {
 }
 
 .main_container {
-    max-width: 1380px;
-    padding: 0 10px;
+    max-width: 1720px;
+    padding: 0 20px;
     margin: 0 auto;
 }
+
+.main_title {
+    color: rgb(119, 66, 55);
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 86px;
+}
+
+// header
+header {
+    padding: 30px 0 0;
+
+    .main_container {
+        @include flex-center();
+        justify-content: space-between;
+    }
+
+    .header_logo,
+    .header_icon {
+        flex-shrink: 0;
+    }
+
+    .nav_link {
+        @include flex-center();
+        gap: 60px;
+    }
+
+    a {
+        color: rgb(119, 66, 55);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+    }
+}
+// header
+
+// home
+.home {
+    display: none;
+    position: relative;
+    padding: 95px 0 131px;
+
+    .home_img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    h1 {
+        color: rgb(119, 66, 55);
+        font-size: 96px;
+        font-weight: 700;
+        line-height: 115px;
+        text-align: center;
+        margin-bottom: 11px;
+    }
+}
+// home
+
+// about
+.about {
+    padding: 70px 0;
+
+    .main_container {
+        @include flex-center();
+        justify-content: space-between;
+        gap: 80px;
+    }
+
+    p {
+        color: rgb(94, 77, 62);
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 150%;
+        text-align: left;
+        max-width: 616px;
+    }
+}
+// about
+
+// price_like
+.price_like {
+    border-top: 3px solid #774237FF;
+    padding: 100px 0;
+
+    .main_container {
+        @include flex-center();
+        justify-content: space-between;
+    }
+
+    .price_link_text {
+        max-width: 701px;
+    }
+
+    .main_title {
+        padding: 25px 0;
+        position: relative;
+
+        img {
+            width: 277px;
+            position: absolute;
+            top: 0;
+            right: -12px;
+            z-index: -1;
+        }
+    }
+
+    p {
+        color: rgb(94, 77, 62);
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 150%;
+    }
+}
+// price_like
+
+// profiles
+.profiles {
+    padding: 100px 0;
+    border-top: 3px solid #774237FF;
+    border-bottom: 3px solid #774237FF;
+
+    .main_container {
+        @include flex-center();
+        justify-content: space-between;
+    }
+
+    .main_title {
+        margin-bottom: 60px;
+    }
+
+    p {
+        color: rgb(94, 77, 62);
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 150%;
+    }
+}
+// profiles
