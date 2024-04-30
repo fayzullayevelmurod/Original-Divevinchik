@@ -229,3 +229,30 @@ header {
     }
 }
 // profiles
+
+// reviews
+.reviews {
+    .main_title {
+        margin-bottom: 80px;
+    }
+
+    .reviews_blocks {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .reviews_block {
+        padding: 10px;
+        overflow: hidden;
+        border-radius: 30px;
+        border: 3px solid #D51A1A;
+        width: calc(100% / 4 - 15px);
+        background-color: #fff;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+// reviews

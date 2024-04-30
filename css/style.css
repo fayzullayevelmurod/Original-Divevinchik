@@ -175,4 +175,24 @@ header a {
   font-size: 32px;
   font-weight: 400;
   line-height: 150%;
+}
+
+.reviews .main_title {
+  margin-bottom: 80px;
+}
+.reviews .reviews_blocks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.reviews .reviews_block {
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 30px;
+  border: 3px solid #D51A1A;
+  width: calc(25% - 15px);
+  background-color: #fff;
+}
+.reviews .reviews_block img {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
