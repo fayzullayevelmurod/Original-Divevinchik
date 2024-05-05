@@ -151,5 +151,19 @@ accordions.forEach((item) => {
     });
 });
 
+let modal = document.querySelector('.modal'),
+    modalClose = document.querySelector('.modal__close'),
+    modalOpen = document.querySelectorAll('.modal__open');
 
+modalOpen.forEach(btn => {
+    btn.onclick = e => {
+        e.preventDefault();
+        modal.classList.add('active');
+        document.querySelector('body').style.overflow = 'hidden';
+    }
+})
 
+modalClose.onclick = () => {
+    modal.classList.remove('active');
+    document.querySelector('body').style.overflow = 'visible';
+}
