@@ -190,6 +190,7 @@
             top: 120px;
             width: 631px;
             right: -121px;
+            height: auto;
         }
 
         &__container {
@@ -246,6 +247,7 @@
 
         .price_img {
             width: 550px;
+            height: auto;
         }
     }
 
@@ -348,6 +350,7 @@
             width: 800px;
             top: 119px;
             right: -40px;
+            height: auto;
         }
 
         &__title {
@@ -475,6 +478,7 @@
             width: 400px;
             right: -45px;
             top: 57px;
+            height: auto;
         }
 
         &__container {
@@ -551,7 +555,6 @@
         }
 
         .price_img {
-            width: 100%;
             width: 350px;
             object-fit: cover;
         }
@@ -659,6 +662,11 @@
 
         &_block {
             width: 335px;
+
+            img {
+                height: auto;
+                width: 100%;
+            }
         }
 
         &_btn {
@@ -677,6 +685,7 @@
             min-width: 480px;
             top: 100px;
             right: -25px;
+            height: auto;
         }
 
         &__title {

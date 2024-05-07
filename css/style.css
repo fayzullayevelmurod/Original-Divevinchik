@@ -897,6 +897,7 @@ address {
     top: 120px;
     width: 631px;
     right: -121px;
+    height: auto;
   }
   .home__container {
     padding: 150px 20px 84px;
@@ -940,6 +941,7 @@ address {
   }
   .price_like .price_img {
     width: 550px;
+    height: auto;
   }
   .profiles {
     padding: 80px 0 179px;
@@ -1012,6 +1014,7 @@ address {
     width: 800px;
     top: 119px;
     right: -40px;
+    height: auto;
   }
   .perfect__title {
     font-size: 72px;
@@ -1102,6 +1105,7 @@ address {
     width: 400px;
     right: -45px;
     top: 57px;
+    height: auto;
   }
   .home__container {
     padding: 140px 20px 42px;
@@ -1164,7 +1168,6 @@ address {
     font-size: 18px;
   }
   .price_like .price_img {
-    width: 100%;
     width: 350px;
     -o-object-fit: cover;
        object-fit: cover;
@@ -1252,6 +1255,10 @@ address {
   .reviews_block {
     width: 335px;
   }
+  .reviews_block img {
+    height: auto;
+    width: 100%;
+  }
   .reviews_btn button {
     font-size: 20px;
     line-height: 100%;
@@ -1264,6 +1271,7 @@ address {
     min-width: 480px;
     top: 100px;
     right: -25px;
+    height: auto;
   }
   .perfect__title {
     font-size: 36px;
