@@ -187,6 +187,25 @@ address {
         font-weight: 400;
         line-height: 29px;
     }
+
+    .header_icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #fff;
+
+        svg {
+            @include transition();
+        }
+
+        &:hover {
+            svg {
+                path {
+                    fill: #D51A1A;
+                }
+            }
+        }
+    }
 }
 // header
 
@@ -744,7 +763,25 @@ address {
     }
 
     .underline {
-        border-bottom: 1px solid;
+        @include transition();
+        position: relative;
+
+        span {
+            @include transition();
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            width: 0%;
+            background: rgb(119, 66, 55);
+        }
+
+        &:hover {
+            span {
+                width: 100%;
+            }
+        }
+
     }
 
     a,span {
@@ -757,6 +794,25 @@ address {
     &_social {
         @include flex-center();
         gap: 20px;
+    }
+
+    .footer_icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #fff;
+
+        svg {
+            @include transition();
+        }
+
+        &:hover {
+            svg {
+                path {
+                    fill: #D51A1A;
+                }
+            }
+        }
     }
 }
 // footer
