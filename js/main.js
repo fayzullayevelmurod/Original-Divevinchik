@@ -153,10 +153,13 @@ accordions.forEach((item) => {
 
 let modal = document.querySelector('.modal'),
     modalClose = document.querySelector('.modal__close'),
-    modalOpen = document.querySelectorAll('.modal__open');
+    modalOpen = document.querySelectorAll('.modal__open'),
+    modalPrice = document.querySelector('.modal__bottom p span');
 
-modalOpen.forEach(btn => {
+modalOpen.forEach((btn, idx) => {
     btn.onclick = e => {
+        let price = document.querySelectorAll('.tarif__block_item .price span')[idx];
+        modalPrice.textContent = parseInt(price.textContent) + '₽';
         e.preventDefault();
         modal.classList.add('active');
         document.querySelector('body').style.overflow = 'hidden';
