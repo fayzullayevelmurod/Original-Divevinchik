@@ -898,6 +898,7 @@ address {
         margin-bottom: 50px;
 
         .icon {
+            flex-shrink: 0;
             width: 19px;
             height: 19px;
             display: flex;
