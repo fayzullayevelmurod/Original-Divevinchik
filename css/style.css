@@ -348,6 +348,7 @@ address {
 }
 .reviews_block img {
   width: 100%;
+  height: auto;
 }
 .reviews_btn {
   margin-top: 80px;
@@ -441,6 +442,7 @@ address {
   padding: 57px 27px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   gap: 40px;
 }
