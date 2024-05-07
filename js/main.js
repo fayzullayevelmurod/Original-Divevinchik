@@ -183,6 +183,12 @@ document.addEventListener("scroll", function() {
     if (targetEl.length) {
         targetEl.forEach(item => {
             let rect = item.el.getBoundingClientRect();
+
+            if (item.icon == jumpArrow) {
+                if (rect.top >= 0 && (rect.bottom - 400) <= window.innerHeight) {
+                    item.icon.play();
+                }
+            }
     
             if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
                 item.icon.play();
