@@ -63,7 +63,7 @@ let priceLike = bodymovin.loadAnimation({
     autoplay: false,
 })
 priceLike.setSpeed(0.5)
-priceLike.play();
+// priceLike.play();
 
 let profile = bodymovin.loadAnimation({
     container: document.querySelector('.profiles_img'),
@@ -73,7 +73,7 @@ let profile = bodymovin.loadAnimation({
     autoplay: false,
 })
 profile.setSpeed(0.5)
-profile.play();
+// profile.play();
 
 let jumpArrow = bodymovin.loadAnimation({
     container: document.querySelector('.jump__arrow'),
@@ -83,7 +83,7 @@ let jumpArrow = bodymovin.loadAnimation({
     autoplay: false,
 })
 jumpArrow.setSpeed(0.5)
-jumpArrow.play();
+// jumpArrow.play();
 
 let perfectText = bodymovin.loadAnimation({
     container: document.querySelector('.perfect__text'),
@@ -93,7 +93,7 @@ let perfectText = bodymovin.loadAnimation({
     autoplay: false,
 })
 perfectText.setSpeed(0.5)
-perfectText.play();
+// perfectText.play();
 
 let perfectArrow = bodymovin.loadAnimation({
     container: document.querySelector('.perfect .arrow_down'),
@@ -103,7 +103,7 @@ let perfectArrow = bodymovin.loadAnimation({
     autoplay: false,
 })
 perfectArrow.setSpeed(0.5)
-perfectArrow.play();
+// perfectArrow.play();
 
 let refundLine = bodymovin.loadAnimation({
     container: document.querySelector('.refund_line'),
@@ -113,7 +113,7 @@ let refundLine = bodymovin.loadAnimation({
     autoplay: false,
 })
 refundLine.setSpeed(0.5)
-refundLine.play();
+// refundLine.play();
 
 let refundCheck = bodymovin.loadAnimation({
     container: document.querySelector('.refund_icon'),
@@ -123,7 +123,7 @@ let refundCheck = bodymovin.loadAnimation({
     autoplay: false,
 })
 refundCheck.setSpeed(0.5)
-refundCheck.play();
+// refundCheck.play();
 
 let answerIcon = bodymovin.loadAnimation({
     container: document.querySelector('.answer__icon'),
@@ -133,7 +133,7 @@ let answerIcon = bodymovin.loadAnimation({
     autoplay: false,
 })
 answerIcon.setSpeed(0.5)
-answerIcon.play();
+// answerIcon.play();
 
 const accordions = document.querySelectorAll('.accordion');
 
@@ -167,3 +167,26 @@ modalClose.onclick = () => {
     modal.classList.remove('active');
     document.querySelector('body').style.overflow = 'visible';
 }
+
+let targetEl = [
+    {icon: priceLike, el: document.querySelector('.price_like_animation')},
+    {icon: profile, el: document.querySelector('.profiles_img')},
+    {icon: jumpArrow, el: document.querySelector('.jump__arrow')},
+    {icon: perfectText, el: document.querySelector('.perfect__text')},
+    {icon: perfectArrow, el: document.querySelector('.perfect .arrow_down')},
+    {icon: refundLine, el: document.querySelector('.refund_line')},
+    {icon: refundCheck, el: document.querySelector('.refund_icon')},
+    {icon: answerIcon, el: document.querySelector('.answer__icon')},
+];
+
+document.addEventListener("scroll", function() {
+    if (targetEl.length) {
+        targetEl.forEach(item => {
+            let rect = item.el.getBoundingClientRect();
+    
+            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                item.icon.play();
+            }
+        })
+    }
+});
