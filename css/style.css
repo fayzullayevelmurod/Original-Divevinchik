@@ -131,6 +131,17 @@ address {
   transform: translate(-50%, -50%);
   width: 130px;
 }
+.header__text {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 96px;
+  font-weight: bold;
+  color: #774237;
+}
+.header__heart {
+  width: 85px;
+}
 .header a {
   color: rgb(119, 66, 55);
   font-size: 24px;
@@ -776,6 +787,104 @@ address {
   stroke: #774237;
 }
 
+.success {
+  min-height: 100vh;
+  position: relative;
+  padding: 247px 0 156px;
+  text-align: center;
+  background: #D8D0BD;
+  z-index: 1;
+}
+.success__container {
+  max-width: 707px;
+  padding: 0;
+  position: relative;
+}
+.success h2 {
+  font-size: 64px;
+  font-weight: bold;
+  color: #774237;
+  margin-bottom: 20px;
+}
+.success p {
+  color: #774237;
+  font-size: 64px;
+  font-weight: 400;
+  margin-bottom: 177px;
+}
+.success .arrow-down {
+  height: 137px;
+  position: absolute;
+  left: 50%;
+  bottom: 120px;
+  transform: translate(-50%, -100%);
+}
+.success ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.success ul li {
+  width: 100%;
+}
+.success ul a {
+  width: 100%;
+  position: relative;
+  font-size: 32px;
+  border-radius: 20px;
+}
+.success ul a img {
+  position: absolute;
+  top: 6.7px;
+  right: 8px;
+}
+.success__card {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.failure {
+  min-height: 100vh;
+  padding: 247px 0;
+  position: relative;
+  background: #D8D0BD;
+  z-index: 1;
+}
+.failure__container {
+  max-width: 802px;
+  padding: 0;
+  text-align: center;
+}
+.failure p {
+  font-size: 64px;
+  font-weight: 400;
+  color: #774237;
+}
+.failure .arrow-down {
+  height: 164px;
+  margin: 20px 0;
+}
+.failure a {
+  width: 100%;
+  border-radius: 20px;
+  font-size: 32px;
+  position: relative;
+}
+.failure a img {
+  position: absolute;
+  top: 6.4px;
+  right: 8px;
+}
+.failure__card {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
 @media (max-width: 1600px) {
   .jump__list li:nth-child(1) {
     width: 400px;
@@ -829,6 +938,9 @@ address {
   }
   .jump__list li:nth-child(3) {
     padding-left: 0;
+  }
+  .header__text {
+    font-size: 60px;
   }
 }
 @media (max-width: 1250px) {
@@ -1063,6 +1175,36 @@ address {
     padding: 80px 0;
   }
 }
+@media (max-width: 992px) {
+  .header__text {
+    font-size: 48px;
+    gap: 20px;
+  }
+  .header__heart {
+    width: 47px;
+  }
+  .success {
+    padding: 190px 0 160px;
+  }
+  .success__container {
+    max-width: calc(100% - 40px);
+  }
+  .success__card {
+    bottom: auto;
+    top: 313px;
+    width: 707px;
+    min-width: 707px;
+  }
+  .failure__container {
+    max-width: calc(100% - 40px);
+  }
+  .failure__card {
+    width: 650px;
+    min-width: 650px;
+    bottom: auto;
+    top: 246px;
+  }
+}
 @media (max-width: 740px) {
   .refund {
     padding: 50px 0;
@@ -1083,6 +1225,81 @@ address {
   .refund p {
     font-size: 18px;
     gap: 10px;
+  }
+  .header__text {
+    font-size: 36px;
+    display: block;
+    width: 206px;
+    text-align: center;
+    position: relative;
+  }
+  .header__heart {
+    display: inline-block;
+    width: 30px;
+    position: absolute;
+    bottom: -2px;
+    right: 1px;
+  }
+  .header.success_header .header_logo img {
+    width: 38px;
+  }
+  .header.success_header .header_icon {
+    width: 30px;
+    height: 30px;
+  }
+  .success {
+    padding: 156px 0 74px;
+  }
+  .success h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  .success p {
+    font-size: 32px;
+    margin-bottom: 116px;
+  }
+  .success .arrow-down {
+    height: 76px;
+    bottom: 76px;
+  }
+  .success ul {
+    gap: 30px;
+  }
+  .success ul a {
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  .success ul a img {
+    width: 16px;
+  }
+  .success ul a.btn_light {
+    border-width: 2px;
+  }
+  .success__card {
+    min-width: 469px;
+    top: 202px;
+  }
+  .failure {
+    padding: 156px 0;
+  }
+  .failure p {
+    font-size: 32px;
+  }
+  .failure .arrow-down {
+    height: 76px;
+  }
+  .failure a {
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  .failure a img {
+    width: 16px;
+  }
+  .failure__card {
+    width: 471px;
+    min-width: 471px;
+    top: 128px;
+    transform: translateX(57px);
   }
 }
 @media (max-width: 700px) {

@@ -181,6 +181,19 @@ address {
         }
     }
 
+    &__text {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        font-size: 96px;
+        font-weight: bold;
+        color: #774237;
+    }
+
+    &__heart {
+        width: 85px;
+    }
+
     a {
         color: rgb(119, 66, 55);
         font-size: 24px;
@@ -965,5 +978,122 @@ address {
     }
 }
 // Modal end
+
+// Success block
+.success {
+    min-height: 100vh;
+    position: relative;
+    padding: 247px 0 156px;
+    text-align: center;
+    background: #D8D0BD;
+    z-index: 1;
+
+    &__container {
+        max-width: 707px;
+        padding: 0;
+        position: relative;
+    }
+
+    h2 {
+        font-size: 64px;
+        font-weight: bold;
+        color: #774237;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: #774237;
+        font-size: 64px;
+        font-weight: 400;
+        margin-bottom: 177px;
+    }
+
+    .arrow-down {
+        height: 137px;
+        position: absolute;
+        left: 50%;
+        bottom: 120px;
+        transform: translate(-50%, -100%);
+    }
+
+    ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        li {
+            width: 100%;
+        }
+
+        a {
+            width: 100%;
+            position: relative;
+            font-size: 32px;
+            border-radius: 20px;
+
+            img {
+                position: absolute;
+                top: 6.7px;
+                right: 8px;
+            }
+        }
+    }
+
+    &__card {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+// Success block end
+
+// Failure
+.failure {
+    min-height: 100vh;
+    padding: 247px 0;
+    position: relative;
+    background: #D8D0BD;
+    z-index: 1;
+
+    &__container {
+        max-width: 802px;
+        padding: 0;
+        text-align: center;
+    }
+
+    p {
+        font-size: 64px;
+        font-weight: 400;
+        color: #774237;
+    }
+
+    .arrow-down {
+        height: 164px;
+        margin: 20px 0;
+    }
+
+    a {
+        width: 100%;
+        border-radius: 20px;
+        font-size: 32px;
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 6.4px;
+            right: 8px;
+        }
+    }
+
+    &__card {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+// Failure end
 
 @import './responsive';

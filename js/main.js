@@ -35,6 +35,16 @@ headerMenu.forEach((item, idx) => {
     }
 })
 
+let headerHeart = bodymovin.loadAnimation({
+    container: document.querySelector('.header__heart'),
+    renderer: 'svg',
+    path: '../animation/header_heart.json',
+    loop: false,
+    autoplay: false,
+})
+headerHeart.setSpeed(0.5)
+headerHeart.play();
+
 let heart = bodymovin.loadAnimation({
     container: document.querySelector('.home .heart'),
     renderer: 'svg',
@@ -54,6 +64,26 @@ let arrow = bodymovin.loadAnimation({
 })
 arrow.setSpeed(0.5)
 arrow.play();
+
+let successArrow = bodymovin.loadAnimation({
+    container: document.querySelector('.success .arrow-down'),
+    renderer: 'svg',
+    path: '../animation/home_arrow.json',
+    loop: false,
+    autoplay: false,
+})
+successArrow.setSpeed(0.5)
+successArrow.play();
+
+let failureArrow = bodymovin.loadAnimation({
+    container: document.querySelector('.failure .arrow-down'),
+    renderer: 'svg',
+    path: '../animation/home_arrow.json',
+    loop: false,
+    autoplay: false,
+})
+failureArrow.setSpeed(0.5)
+failureArrow.play();
 
 let priceLike = bodymovin.loadAnimation({
     container: document.querySelector('.price_like_animation'),
@@ -166,9 +196,11 @@ modalOpen.forEach((btn, idx) => {
     }
 })
 
-modalClose.onclick = () => {
-    modal.classList.remove('active');
-    document.querySelector('body').style.overflow = 'visible';
+if (modalClose) {
+    modalClose.onclick = () => {
+        modal.classList.remove('active');
+        document.querySelector('body').style.overflow = 'visible';
+    }
 }
 
 let targetEl = [

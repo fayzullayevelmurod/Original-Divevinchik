@@ -92,6 +92,12 @@
             }
         }
     }
+
+    .header {
+        &__text {
+            font-size: 60px;
+        }
+    }
 }
 
 @media (max-width: 1250px) {
@@ -415,6 +421,47 @@
     }
 }
 
+@media (max-width: 992px) {
+    .header {
+        &__text {
+            font-size: 48px;
+            gap: 20px;
+        }
+
+        &__heart {
+            width: 47px;
+        }
+    }
+
+    .success {
+        padding: 190px 0 160px;
+
+        &__container {
+            max-width: calc(100% - 40px);
+        }
+
+        &__card {
+            bottom: auto;
+            top: 313px;
+            width: 707px;
+            min-width: 707px;
+        }
+    }
+
+    .failure {
+        &__container {
+            max-width: calc(100% - 40px);
+        }
+
+        &__card {
+            width: 650px;
+            min-width: 650px;
+            bottom: auto;
+            top: 246px;
+        }
+    }
+}
+
 @media (max-width: 740px) {
     .refund {
         padding: 50px 0;
@@ -438,6 +485,109 @@
         p {
             font-size: 18px;
             gap: 10px;
+        }
+    }
+
+    .header {
+        &__text {
+            font-size: 36px;
+            display: block;
+            width: 206px;
+            text-align: center;
+            position: relative;
+        }
+
+        &__heart {
+            display: inline-block;
+            width: 30px;
+            position: absolute;
+            bottom: -2px;
+            right: 1px;
+        }
+
+        &.success_header {
+            .header_logo {
+                img {
+                    width: 38px;
+                }
+            }
+
+            .header_icon {
+                width: 30px;
+                height: 30px;
+
+                svg {
+                }
+            }
+        }
+    }
+
+    .success {
+        padding: 156px 0 74px;
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 32px;
+            margin-bottom: 116px;
+        }
+
+        .arrow-down {
+            height: 76px;
+            bottom: 76px;
+        }
+
+        ul {
+            gap: 30px;
+
+            a {
+                font-size: 16px;
+                border-radius: 10px;
+
+                img {
+                    width: 16px;
+                }
+
+                &.btn_light {
+                    border-width: 2px;
+                }
+            }
+        }
+
+        &__card {
+            min-width: 469px;
+            top: 202px;
+        }
+    }
+
+    .failure {
+        padding: 156px 0;
+
+        p {
+            font-size: 32px;
+        }
+
+        .arrow-down {
+            height: 76px;
+        }
+
+        a {
+            font-size: 16px;
+            border-radius: 10px;
+
+            img {
+                width: 16px;
+            }
+        }
+
+        &__card {
+            width: 471px;
+            min-width: 471px;
+            top: 128px;
+            transform: translateX(57px);
         }
     }
 }
